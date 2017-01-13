@@ -72,7 +72,7 @@ return [
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE_TEST', 'bufet_test'),
             'username' => env('MYSQL_USER', env('DB_USERNAME', 'homestead')),
-            'password' => env('MYSQL_PASSWORD', env('DB_PASSWORD', 'secret'),
+            'password' => env('MYSQL_PASSWORD', env('DB_PASSWORD', 'secret')),
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
