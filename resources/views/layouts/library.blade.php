@@ -22,6 +22,12 @@
        .mdb-skin .navbar .navbar-nav .nav-item .dropdown-menu a:active, .mdb-skin .navbar .navbar-nav .nav-item .dropdown-menu a:focus, .mdb-skin .navbar .navbar-nav .nav-item .dropdown-menu a:hover{
             background-color: #3f51b5;
         }
+.side-nav .logo-wrapper img
+{
+    padding:  10px;
+                padding-left: 73px;
+    height: 110px;    
+}
 
     </style>
 </head>

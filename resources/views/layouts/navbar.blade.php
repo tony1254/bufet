@@ -8,8 +8,8 @@
 </a>
     <!-- Navbar brand -->
    <a class="navbar-brand " href="/">
-        <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" alt="">
-        coperativa
+        <img src="content/T.png" height="40" alt="">
+        
     </a>
     <!-- Collapse button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
@@ -85,12 +85,14 @@
 <!-- Sidebar navigation -->
 <!-- <div id="slide-out" class="side-nav fixed">
     <ul class="custom-scrollbar list-unstyled ps ps--theme_default ps--active-y"> -->
-        <div id="slide-out" class="side-nav sn-bg-2 fixed " >
+        <div id="slide-out" class="side-nav sn-bg- fixed indigo darken-3" >
         <ul class="custom-scrollbar list-unstyled ps  ps--active-y" style="max-height:100vh;" >
         <!-- Logo -->
         <li>
-            <div class="logo-wrapper waves-light">
-                <a href="#"><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" class="img-fluid flex-center"></a>
+            <div class="logo-wrapper waves-light" style="
+    height: 100px;>
+                <a href="#"><img src="content/T.png" height="20px"  class="img-fluid flex-center">
+                    <br></a>
             </div>
         </li>
         <!--/. Logo -->
