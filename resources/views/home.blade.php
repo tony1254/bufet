@@ -35,7 +35,30 @@
     <input type="checkbox" class="filled-in" id="checkbox2">
     <label for="checkbox2">Filled-in checkbox</label>
 </div>
-              
+        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+<select class="selectpicker">
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
+</select>
+
+<select class="mdb-select" id="rol" name="rol">
+    <option value="" disabled selected>Choose your option</option>
+    <option value="admin">Administrador</option>
+    <option value="user">Usuario</option>
+</select>
+<label>ROles</label>
+<!--Blue select-->
+<select class="mdb-select colorful-select dropdown-primary">
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>
+    <option value="3">Option 3</option>
+    <option value="4">Option 4</option>
+    <option value="5">Option 5</option>
+</select>
+<label>Blue select</label>
+eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
+
               <!-- Switch -->
   <div class="switch">
     <label>

@@ -8,7 +8,7 @@
 </a>
     <!-- Navbar brand -->
    <a class="navbar-brand " href="/">
-        <img src="content/T.png" height="40" alt="">
+        <img src="{{url("/content/T.png")}}" height="40" alt="">
         
     </a>
     <!-- Collapse button -->
@@ -91,7 +91,7 @@
         <li>
             <div class="logo-wrapper waves-light" style="
     height: 100px;>
-                <a href="#"><img src="content/T.png" height="20px"  class="img-fluid flex-center">
+                <a href="#"><img src="{{url("/content/T.png")}}" height="20px"  class="img-fluid flex-center">
                     <br></a>
             </div>
         </li>

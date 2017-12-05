@@ -8,15 +8,16 @@
     <!--Import .css  https://mdbootstrap.com/support/side-nav-scrolling/-->
 
     <!-- Font Awesome -->
-    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css" />
+    <link type="text/css" rel="stylesheet" href="{{url("/css/font-awesome.min.css")}}" />
     <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{url("/css/bootstrap.min.css")}}" rel="stylesheet">
     <!-- Material Design Bootstrap  robe el compilado-->
-    <link href="css/mdb.min.css" rel="stylesheet">
-    <link href="css/compiled.min.css" rel="stylesheet">
+    {{-- <link href="css/mdb.min.css" rel="stylesheet"> --}}
+    {{-- <link href="css/compiled.min.css" rel="stylesheet"> --}}
+    <link href="{{url("/css/compiled3.min.css")}}" rel="stylesheet">
     <!-- <link href="css/dashboard.bundle.css" rel="stylesheet"> -->
     <!-- Your custom styles (optional) -->
-    <link href="css/style.css" rel="stylesheet">
+    {{-- <link href="css/style.css" rel="stylesheet"> --}}
 
     <style type="text/css">
        .mdb-skin .navbar .navbar-nav .nav-item .dropdown-menu a:active, .mdb-skin .navbar .navbar-nav .nav-item .dropdown-menu a:focus, .mdb-skin .navbar .navbar-nav .nav-item .dropdown-menu a:hover{
@@ -28,6 +29,10 @@
                 padding-left: 73px;
     height: 110px;    
 }
+
+
+
+
 
     </style>
 </head>

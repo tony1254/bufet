@@ -54,6 +54,17 @@
         <!-- main -->
                <!--Main layout-->
     <main>
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+        <!--Error message-->
         <div class="container card cascading-admin-card">
             @yield('content')
         <br>
@@ -67,18 +78,21 @@
     <!-- /FOOTER -->
     <!-- SCRIPTS -->
     <!-- JQuery -->
-    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="{{url("/js/jquery.min.js")}}"></script>
     <!-- <script type="text/javascript" src="node_modules/MDB/js/jquery-3.2.1.min.js"></script> -->
     <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="js/popper.min.js"></script>
-    <script type="text/javascript" src="js/compiled.min.js"></script>
+    <script type="text/javascript" src="{{url("/js/popper.min.js")}}"></script>
+    <script type="text/javascript" src="{{url("/js/compiled.min.js")}}"></script>
     <!-- Bootstrap core JavaScript -->
     <!-- <script type="text/javascript" src="node_modules/MDB/js/bootstrap.min.js"></script> -->
     <!-- MDB core JavaScript -->
     <!-- <script type="text/javascript" src="node_modules/MDB/js/mdb.min.js"></script> -->
 
     <script type="text/javascript">
-
+ // Material Select Initialization
+ $(document).ready(function() {
+    $('.mdb-select').material_select();
+  });
 
     new WOW().init();
         // $(".button-collapse").sideNav();
@@ -94,5 +108,19 @@ Ps.initialize(el);
     </script>
     @yield('script')
 </body>
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+           @foreach ($errors->all() as $error)
+               
+                <script type="text/javascript">
+                    $(function() {
+                        toastr.error('{{ $error }}.')
+                    });
+                </script>
+            @endforeach
+        </ul>
+    </div>
+@endif
 
 </html>
