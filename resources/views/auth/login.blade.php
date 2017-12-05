@@ -33,6 +33,12 @@
                                     </span>
                                 @endif
                         </div>
+<div class="row justify-content-md-center">  
+                                <button type="submit" class="btn btn-primary btn-block">
+                                    Iniciar sesion
+                                </button>
+</div>
+                        
 <div class="row">
     <div class="col-4">
         
@@ -46,18 +52,12 @@
                         
     </div>
     <div class="col-8">
-                                <button type="submit" class="btn btn-primary btn-block">
-                                    Iniciar sesion
-                                </button>
         
-    </div>
-</div>
-<div class="row text-center">  
                                 <a class="btn btn-outline-info btn-sm  btn-rounded " href="{{ route('password.request') }}">
                                     olvidaste tu contraseña
                                 </a>
+    </div>
 </div>
-                        
                     </form>
         </div>
     </div>

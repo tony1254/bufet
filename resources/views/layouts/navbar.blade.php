@@ -17,36 +17,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <!-- Links -->
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item ">
-                <a class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Features</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-            </li>
-            <!-- Dropdown -->
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link waves-effect waves-light" href="#"><i class="fa fa-envelope"></i> Contact <span class="sr-only">(current)</span></a>
-            </li>
+          
         </ul>
         <!-- Links -->
-        <!-- Search form -->
-        <form class="form-inline">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-        </form>
+       
         <!-- iconos -->
 
-        <ul class="navbar-nav ml-auto nav-flex-icons">
+        <ul class="navbar-nav ml-auto nav-flex-icons align-self-end">
             <li class="nav-item">
                 <a class="nav-link waves-effect waves-light">1 <i class="fa fa-envelope"></i></a>
             </li>
@@ -58,6 +35,7 @@
                 <a class="nav-link dropdown-toggle waves-effect waves-light" id="navbarDropdownMenuLink-5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     {{ Auth::user()->name }} 
                     <img  src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="img-fluid rounded-circle z-depth-0">
+                    <i class="fa fa-cog" aria-hidden="true"></i>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right dropdown-purple" aria-labelledby="navbarDropdownMenuLink-5" style="position: absolute;">
                     <a class="dropdown-item waves-effect waves-light" href="#">Action</a>
@@ -110,7 +88,7 @@
         <li>
             <form class="search-form" role="search">
                 <div class="form-group waves-light">
-                    <input type="text" class="form-control" placeholder="Search">
+                    <input type="text" class="form-control" placeholder="Buscar">
                 </div>
             </form>
         </li>

@@ -57,6 +57,33 @@
 
 
     </style>
+
+<style type="text/css">
+    
+
+.pagination {
+     /*display: inline-block;*/
+}
+
+.pagination span,.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.pagination li.active span {
+    background-color: #5c6bc0   ;
+    color: white;
+    border-radius: 33px 33px 33px 33px;
+-moz-border-radius: 33px 33px 33px 33px;
+-webkit-border-radius: 33px 33px 33px 33px;
+
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+</style>
+
 </head>
 
     <!--Library FIN  -->
