@@ -70,7 +70,11 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        //
+
+
+        // show the edit form and pass the nerd
+        return view('user/edit')
+            ->with('user', $user);
     }
 
     /**
@@ -82,7 +86,13 @@ class UserController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+         $request->validate([
+             'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'rol' => 'required',
+            'password' => 'required|string|min:6|confirmed',
+]);
+        return $request->all();
     }
 
     /**
@@ -93,6 +103,16 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        // delete
+
+\DB::table('role_user')->where('user_id', $user->id)->delete();
+        $user->delete();
+
+        // redirect
+        // Session::flash('message', 'Successfully deleted the nerd!');
+        \Alert::success("Registro eliminado con exito");
+        return redirect()->route('users.index'); 
+
+        // return Redirect::to('users');
     }
 }

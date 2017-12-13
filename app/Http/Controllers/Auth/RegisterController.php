@@ -37,7 +37,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
     }
 
     /**
@@ -80,6 +80,10 @@ class RegisterController extends Controller
         $user
             ->roles()
             ->attach(Role::where('name', 'user')->first());
+
+
+        \Alert::success("Registro agregado con exito");
+        return redirect()->route('users.index'); 
 
         return $user;
     }

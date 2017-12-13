@@ -24,6 +24,11 @@ class HomeController extends Controller
     public function index(Request $request)
     {
          $request->user()->authorizeRoles(['user', 'admin']);
+  
+         // $alert->msj="hola";
+         // $alert->color="danger";
+        // \Alert::success("Registro agregado con exito");
+
         return view('home');
     }
     /*

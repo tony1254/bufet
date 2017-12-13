@@ -53,8 +53,20 @@
 }
 
 
-
-
+.select-wrapper input.select-dropdown {
+        font-size: .8rem;
+}
+/*
+ .form-group label.control-label{
+    font-size: .9rem;
+        color: #757575;
+        transition: .2s ease-out;
+    
+    top: .8rem;
+    left: 0;
+    font-size: 1rem;
+    cursor: text;
+ }*/
 
     </style>
 

@@ -2,14 +2,18 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-    @yield('library') @yield('head')
+    @yield('library') 
+    @yield('head')
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>{{ config('app.name', 'Laravel') }}@yield('title')</title>
+    <title>{{ config('app.name', 'Laravel') }}
+        @yield('title')
+    </title>
 </head>
 
 <body class="grey  lighten-2  fixed-sn mdb-skin">
-    @yield('alert') @yield('navbar')
+    @yield('alert') 
+    @yield('navbar')
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top" style="display:none">
             <div class="container">
@@ -48,29 +52,26 @@
                 </div>
             </div>
         </nav>
-        
-
         <p></p>
         <!-- main -->
-               <!--Main layout-->
-    <main>
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
-
-        <!--Error message-->
-        <div class="container card cascading-admin-card">
-            @yield('content')
-        <br>
-        <br>
-        </div>
-    </main>
+        <!--Main layout-->
+        <main>
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+            @endif {!! Alert::render() !!}
+            <!--Error message-->
+            <div class="container card cascading-admin-card">
+                @yield('content')
+                <br>
+                <br>
+            </div>
+        </main>
         <!-- /main -->
     </div>
     <!-- FOOTER -->
@@ -87,40 +88,34 @@
     <!-- <script type="text/javascript" src="node_modules/MDB/js/bootstrap.min.js"></script> -->
     <!-- MDB core JavaScript -->
     <!-- <script type="text/javascript" src="node_modules/MDB/js/mdb.min.js"></script> -->
-
     <script type="text/javascript">
- // Material Select Initialization
- $(document).ready(function() {
-    $('.mdb-select').material_select();
-  });
-
+    // Material Select Initialization
+    $(document).ready(function() {
+        $('.mdb-select').material_select();
+    });
     new WOW().init();
-        // $(".button-collapse").sideNav();
-        $('.button-collapse').sideNav({edge: 'left', closeOnClick: true });
-var el = document.querySelector('.custom-scrollbar');
-Ps.initialize(el);
-
+    // $(".button-collapse").sideNav();
+    $('.button-collapse').sideNav({ edge: 'left', closeOnClick: true });
+    var el = document.querySelector('.custom-scrollbar');
+    Ps.initialize(el);
     $(function() {
         console.log("ready!");
-
-
     });
     </script>
     @yield('script')
 </body>
-    @if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-           @foreach ($errors->all() as $error)
-               
-                <script type="text/javascript">
-                    $(function() {
-                        toastr.error('{{ $error }}.')
-                    });
-                </script>
-            @endforeach
-        </ul>
-    </div>
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <script type="text/javascript">
+        $(function() {
+            toastr.error('{{ $error }}.')
+        });
+        </script>
+        @endforeach
+    </ul>
+</div>
 @endif
 
 </html>
