@@ -1,3 +1,4 @@
+@section('title') - Usuarios @endsection 
 @extends('layouts.app') @section('content')
 <table class="table table-hover table-sm">
     <thead class="blue-grey lighten-4">

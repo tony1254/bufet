@@ -87,10 +87,10 @@
 <!-- Side navigation links -->
 <li>
     <ul class="collapsible collapsible-accordion">
-        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-chevron-right"></i> Submit blog<i class="fa fa-angle-down rotate-icon"></i></a>
+        <li><a class="collapsible-header waves-effect arrow-r"><i class="fa fa-chevron-right"></i> Administracion<i class="fa fa-angle-down rotate-icon"></i></a>
             <div class="collapsible-body">
                 <ul>
-                    <li><a href="#" class="waves-effect">Submit listing</a>
+                    <li><a href="{{url("/users")}}" class="waves-effect">Usuarios</a>
                     </li>
                     <li><a href="#" class="waves-effect">Registration form</a>
                     </li>

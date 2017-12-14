@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Role;
 
 use App\User;
 use Illuminate\Http\Request;
@@ -71,10 +72,12 @@ class UserController extends Controller
     public function edit(User $user)
     {
 
-
+$rol=\DB::table('role_user')->where('user_id', $user->id)->first();
+$rol=Role::find($rol->role_id);
         // show the edit form and pass the nerd
         return view('user/edit')
-            ->with('user', $user);
+            ->with('user', $user)
+            ->with('rol', $rol);
     }
 
     /**
@@ -88,11 +91,24 @@ class UserController extends Controller
     {
          $request->validate([
              'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
+            'email' => 'required|string|email|max:255|unique:users,email,'.$user->id,
             'rol' => 'required',
-            'password' => 'required|string|min:6|confirmed',
+            'password' => 'nullable|string|min:6|confirmed',
 ]);
-        return $request->all();
+
+         
+        $role=\DB::table('role_user')->where('user_id', $user->id)
+                                     ->update(['role_id' => $request->input('rol')]);            
+            
+
+         $user->name=$request->input('name');
+         $user->email=$request->input('email');
+         $user->password= ($request->input('password')==null) ? $user->password : bcrypt($request->input('password'));
+         $user->save();
+       \Alert::success("Registro modificado con exito");
+        return redirect()->route('users.index'); 
+
+
     }
 
     /**
