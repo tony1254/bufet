@@ -49,7 +49,7 @@
 {
     padding:  10px;
                 padding-left: 73px;
-    height: 110px;    
+    height: 110px;
 }
 
 
@@ -61,7 +61,7 @@
     font-size: .9rem;
         color: #757575;
         transition: .2s ease-out;
-    
+
     top: .8rem;
     left: 0;
     font-size: 1rem;
@@ -71,7 +71,27 @@
     </style>
 
 <style type="text/css">
-    
+/*
+ style=" float:left; top: 60px; right: -75px; z-index: 1;"
+*/
+.todo{
+  height: 100%;
+  width:100%;
+}
+.topFix{
+    top: 60px;
+    right: 2%;
+     z-index: 1
+}
+@media (min-width: 768px) {
+  .topFix{
+    position: absolute;
+    top:-15px;
+right: -70px;
+z-index: -5;
+  }
+}
+
 
 .pagination {
      /*display: inline-block;*/
@@ -94,6 +114,8 @@
 }
 
 .pagination a:hover:not(.active) {background-color: #ddd;}
+
+
 </style>
 
 </head>

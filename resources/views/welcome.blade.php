@@ -1,10 +1,10 @@
-@extends('layouts.app') 
-@section('title') - Welcome @endsection 
+@extends('layouts.app')
+@section('title') - Welcome @endsection
 @section('content')
 
 
 
-            
+
 <!--Carousel Wrapper-->
 <div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
     <!--Indicators-->
@@ -18,7 +18,7 @@
     <div class="carousel-inner" role="listbox">
         <div class="carousel-item active">
             <div class="view hm-black-light">
-                <img class="d-block w-100" src="https://dijoque.com/wp-content/uploads/2017/05/07-3.jpg" alt="First slide">
+                <img class="d-block w-100" src="https://www.casur.gov.co/documents/20181/3882182/JURIDICA/735b4ed3-70d5-4117-a195-e8a29e3a49b6?t=1525268634656" alt="First slide">
                 <div class="mask"></div>
             </div>
             <div class="carousel-caption">
@@ -62,7 +62,7 @@
     <!--/.Controls-->
 </div>
 <!--/.Carousel Wrapper-->
-                
+
 
 <div class="flex-center position-ref full-height">
     @if (Route::has('login'))

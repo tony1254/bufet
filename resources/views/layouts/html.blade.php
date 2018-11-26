@@ -2,7 +2,7 @@
 <html lang="{{ app()->getLocale() }}">
 
 <head>
-    @yield('library') 
+    @yield('library')
     @yield('head')
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -12,7 +12,7 @@
 </head>
 
 <body class="grey  lighten-2  fixed-sn mdb-skin">
-    @yield('alert') 
+    @yield('alert')
     @yield('navbar')
     <div id="app">
         <nav class="navbar navbar-default navbar-static-top" style="display:none">
@@ -66,7 +66,7 @@
             </div>
             @endif {!! Alert::render() !!}
             <!--Error message-->
-            <div class="container card cascading-admin-card">
+            <div class="container card cascading-admin-card " style="width:100%; height:100%;">
                 @yield('content')
                 <br>
                 <br>
